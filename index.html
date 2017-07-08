@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sentiment Analysis - New Horizon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Load c3.css -->
+  <link href="./c3/c3.css" rel="stylesheet" type="text/css">
+
+  <!-- Load d3.js and c3.js -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="./c3/c3.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Sentiment Analysis</h1>
+  <p>Enter a hashtag and I'll tell you it's trend</p>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="hashtag" class="form-control" size="50" placeholder="Hash Tag" required id=>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">GO!</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="chart">
+</div>
+
+<div class="container-fluid bg-grey">
+
+    <div class="col-sm-6">
+        <h2 align="center">Negative</h2>
+        <div id="negCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#negCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#negCarousel" data-slide-to="1"></li>
+            <li data-target="#negCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+            <h4 id="n1"> "Horrible Horrible!"<br></h4>
+            </div>
+            <div class="item">
+            <h4 id="n2">"One word... Boring!!"<br></h4>
+            </div>
+            <div class="item">
+            <h4 id="n3">"Could I... BE any more sad with this company?"<br></h4>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#negCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#negCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h2 align="center">Positive</h2>
+        <div id="posCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#posCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#posCarousel" data-slide-to="1"></li>
+            <li data-target="#posCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+            <div class="item active">
+            <h4 id="p1">"New Horizon is the best"<br></h4>
+            </div>
+            <div class="item">
+            <h4 id="p2">"One word... WOW!!"<br></h4>
+            </div>
+            <div class="item">
+            <h4 id="p3">"Could I... BE any more happy with this college?"<br></h4>
+            </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#posCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#posCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="container-fluid text-center footerclass">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Created By<br>Srinidhi Kashyap and Group</a></p>
+</footer>
+  <script src="c3_gauge.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
